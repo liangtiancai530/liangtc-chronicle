@@ -147,9 +147,10 @@ function Home() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1400px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[300px_1fr_420px] gap-6">
+      <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[280px_1fr_1fr_400px] gap-6">
         <PortraitColumn />
         <TracesColumn />
+        <MemorableEventsColumn />
         <DiaryColumn />
       </main>
 
