@@ -1,6 +1,19 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import portrait from "@/assets/portrait.jpg";
+import zmsaSpeech from "@/assets/liang-zmsa-speech.png.asset.json";
+
+type MemorableEvent = { date: string; title: string; image?: string; body: string };
+
+const MEMORABLE_EVENTS: MemorableEvent[] = [
+  {
+    date: "Jul 11, 2026",
+    title: "Keynote at China Maritime Day — ZMSA Alliance",
+    image: zmsaSpeech.url,
+    body:
+      "The 22nd China Maritime Day. As Deputy General Manager of Huayang Maritime Center Co., Ltd., Liang Tiancai delivered a keynote on how the Zhoushan Comprehensive Maritime Service Alliance (ZMSA) can advance green and intelligent shipping. Leveraging the Yangtze River Delta location and Zhoushan's maritime industry resources, the alliance aims to build an open, collaborative, and shared maritime service ecosystem — focusing on green low-carbon service matching, digital-intelligent ship management platforms, international-rule interoperability, and shared branding. Through a path of \"connection, standardization, and platformization,\" it seeks to lower transformation costs and improve operational efficiency for small and medium shipping companies, aggregating scattered single-point capabilities into comprehensive solutions and moving green intelligent shipping from enterprise islands to industry-wide coordination.",
+  },
+];
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -134,9 +147,10 @@ function Home() {
         </div>
       </header>
 
-      <main className="mx-auto max-w-[1400px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[300px_1fr_420px] gap-6">
+      <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[280px_1fr_1fr_400px] gap-6">
         <PortraitColumn />
         <TracesColumn />
+        <MemorableEventsColumn />
         <DiaryColumn />
       </main>
 
@@ -185,6 +199,46 @@ function PortraitColumn() {
     </aside>
   );
 }
+
+
+function MemorableEventsColumn() {
+  return (
+    <section>
+      <div className="mb-5">
+        <h2 className="font-serif text-2xl">Memorable Events</h2>
+        <p className="text-sm text-muted-foreground">
+          Milestones worth remembering — talks, honors, and gatherings.
+        </p>
+      </div>
+      <div className="space-y-6">
+        {MEMORABLE_EVENTS.map((e, i) => (
+          <article
+            key={i}
+            className="rounded-lg border border-border bg-card overflow-hidden"
+          >
+            {e.image && (
+              <img
+                src={e.image}
+                alt={e.title}
+                className="w-full aspect-[4/3] object-cover"
+              />
+            )}
+            <div className="p-4">
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                {e.date}
+              </div>
+              <h3 className="font-serif text-lg mt-1">{e.title}</h3>
+              <p className="text-sm leading-relaxed mt-2 text-foreground/90">
+                {e.body}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 
 function TracesColumn() {
   return (
