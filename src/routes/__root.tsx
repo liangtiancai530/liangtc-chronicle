@@ -77,14 +77,13 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "LTC Traces — Liang's Life Traces" },
+      { name: "description", content: "A personal chronicle of Liang's life traces from 2010 to today, with a Windows-style diary writer." },
+      { name: "author", content: "Liang" },
+      { property: "og:title", content: "LTC Traces — Liang's Life Traces" },
+      { property: "og:description", content: "Portrait, life traces since 2010, and a classic Windows-style diary." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
     ],
     links: [
       {
