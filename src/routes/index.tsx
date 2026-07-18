@@ -198,7 +198,45 @@ function PortraitColumn() {
       </div>
     </aside>
   );
+
+function MemorableEventsColumn() {
+  return (
+    <section>
+      <div className="mb-5">
+        <h2 className="font-serif text-2xl">Memorable Events</h2>
+        <p className="text-sm text-muted-foreground">
+          Milestones worth remembering — talks, honors, and gatherings.
+        </p>
+      </div>
+      <div className="space-y-6">
+        {MEMORABLE_EVENTS.map((e, i) => (
+          <article
+            key={i}
+            className="rounded-lg border border-border bg-card overflow-hidden"
+          >
+            {e.image && (
+              <img
+                src={e.image}
+                alt={e.title}
+                className="w-full aspect-[4/3] object-cover"
+              />
+            )}
+            <div className="p-4">
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                {e.date}
+              </div>
+              <h3 className="font-serif text-lg mt-1">{e.title}</h3>
+              <p className="text-sm leading-relaxed mt-2 text-foreground/90">
+                {e.body}
+              </p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+  );
 }
+
 
 function TracesColumn() {
   return (
