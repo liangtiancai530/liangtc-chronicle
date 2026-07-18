@@ -77,13 +77,17 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "LTC Traces — Liang's Life Traces" },
-      { name: "description", content: "A personal chronicle of Liang's life traces from 2010 to today, with a Windows-style diary writer." },
+      { title: "LTC Traces — Liang's Life Traces (1989–Present)" },
+      { name: "description", content: "A personal chronicle of Liang's life traces from 2010 to today, drawn from his diaries, alongside a classic Windows-style diary writer." },
       { name: "author", content: "Liang" },
-      { property: "og:title", content: "LTC Traces — Liang's Life Traces" },
-      { property: "og:description", content: "Portrait, life traces since 2010, and a classic Windows-style diary." },
+      { property: "og:title", content: "LTC Traces — Liang's Life Traces (1989–Present)" },
+      { property: "og:description", content: "A personal chronicle of Liang's life traces from 2010 to today, drawn from his diaries, alongside a classic Windows-style diary writer." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "LTC Traces — Liang's Life Traces (1989–Present)" },
+      { name: "twitter:description", content: "A personal chronicle of Liang's life traces from 2010 to today, drawn from his diaries, alongside a classic Windows-style diary writer." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9714139b-9ef5-45ed-9b47-a8d2edba4dab" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/9714139b-9ef5-45ed-9b47-a8d2edba4dab" },
     ],
     links: [
       {

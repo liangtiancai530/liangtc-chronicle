@@ -5,17 +5,17 @@ import portrait from "@/assets/portrait.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "LTC Traces — Liang's Life Traces (2010–Present)" },
+      { title: "LTC Traces — Liang's Life Traces (1989–Present)" },
       {
         name: "description",
         content:
           "A personal chronicle of Liang's life traces from 2010 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
       },
-      { property: "og:title", content: "LTC Traces — Liang's Life Traces" },
+      { property: "og:title", content: "LTC Traces — Liang's Life Traces (1989–Present)" },
       {
         property: "og:description",
         content:
-          "Portrait, life traces since 2010, and a Windows-style diary writer.",
+          "A personal chronicle of Liang's life traces from 2010 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
       },
     ],
   }),
