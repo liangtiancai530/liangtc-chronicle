@@ -198,6 +198,8 @@ function PortraitColumn() {
       </div>
     </aside>
   );
+}
+
 
 function MemorableEventsColumn() {
   return (
