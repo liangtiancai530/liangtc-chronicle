@@ -140,5 +140,164 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: Georgia, "Times New Roman", serif;
   }
+}
+
+/* Windows-classic diary window styling */
+:root {
+  --win-face: #ece9d8;
+  --win-face-2: #d4d0c8;
+  --win-border: #808080;
+  --win-border-light: #ffffff;
+  --win-border-dark: #404040;
+  --win-title-from: #0a246a;
+  --win-title-to: #a6caf0;
+  --win-text: #000000;
+  --win-hover: #d9e5f5;
+  --win-field: #ffffff;
+}
+
+.win-window {
+  background: var(--win-face);
+  color: var(--win-text);
+  border: 1px solid var(--win-border-dark);
+  box-shadow:
+    inset 1px 1px 0 var(--win-border-light),
+    inset -1px -1px 0 var(--win-border),
+    2px 2px 0 rgba(0, 0, 0, 0.15);
+  font-family: "Segoe UI", Tahoma, "MS Sans Serif", Arial, sans-serif;
+  font-size: 12px;
+}
+
+.win-titlebar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3px 4px 3px 6px;
+  color: #fff;
+  font-weight: 700;
+  background: linear-gradient(
+    to bottom,
+    var(--win-title-from) 0%,
+    #1e4bb2 40%,
+    #2f6dd4 100%
+  );
+  border-bottom: 1px solid #000;
+}
+
+.win-icon {
+  width: 14px;
+  height: 14px;
+  background: linear-gradient(135deg, #fffbe6, #e8c460);
+  border: 1px solid #7a5a10;
+  border-radius: 1px;
+}
+
+.win-tbtn {
+  width: 20px;
+  height: 18px;
+  background: var(--win-face);
+  border: 1px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0 var(--win-border-light);
+  color: #000;
+  font-size: 10px;
+  line-height: 1;
+  cursor: pointer;
+}
+.win-tbtn:active {
+  box-shadow: inset -1px -1px 0 var(--win-border-light),
+    inset 1px 1px 0 var(--win-border-dark);
+}
+.win-close {
+  background: #d94a3a;
+  color: #fff;
+}
+
+.win-menubar {
+  display: flex;
+  gap: 2px;
+  padding: 2px 4px;
+  background: var(--win-face);
+  border-bottom: 1px solid var(--win-face-2);
+}
+.win-menu {
+  padding: 2px 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  cursor: pointer;
+  color: #000;
+}
+.win-menu:hover {
+  border-color: var(--win-border-dark);
+  background: var(--win-hover);
+}
+
+.win-toolbar {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  padding: 4px 6px;
+  background: var(--win-face);
+  border-bottom: 1px solid var(--win-face-2);
+}
+
+.win-btn {
+  padding: 3px 12px;
+  background: var(--win-face);
+  border: 1px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0 var(--win-border-light),
+    inset -1px -1px 0 var(--win-border);
+  cursor: pointer;
+  color: #000;
+  min-width: 60px;
+}
+.win-btn:hover:not(:disabled) {
+  background: var(--win-hover);
+}
+.win-btn:active:not(:disabled) {
+  box-shadow: inset -1px -1px 0 var(--win-border-light),
+    inset 1px 1px 0 var(--win-border-dark);
+}
+.win-btn:disabled {
+  color: #808080;
+  cursor: not-allowed;
+}
+
+.win-input {
+  padding: 3px 6px;
+  background: var(--win-field);
+  color: #000;
+  border: 1px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-size: 12px;
+}
+
+.win-textarea {
+  min-height: 260px;
+  padding: 6px 8px;
+  background: var(--win-field);
+  color: #000;
+  border: 1px solid var(--win-border-dark);
+  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.15);
+  font-family: "Lucida Console", "Consolas", monospace;
+  font-size: 12.5px;
+  line-height: 1.55;
+  resize: vertical;
+}
+
+.win-body {
+  padding: 8px;
+  background: var(--win-face);
+}
+
+.win-statusbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 8px;
+  background: var(--win-face);
+  border-top: 1px solid var(--win-face-2);
+  font-size: 11px;
+  color: #333;
 }
