@@ -1,24 +1,374 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { useEffect, useMemo, useState } from "react";
+import portrait from "@/assets/portrait.jpg";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
-  component: Index,
+  head: () => ({
+    meta: [
+      { title: "LTC Traces — Liang's Life Traces (2010–Present)" },
+      {
+        name: "description",
+        content:
+          "A personal chronicle of Liang's life traces from 2010 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
+      },
+      { property: "og:title", content: "LTC Traces — Liang's Life Traces" },
+      {
+        property: "og:description",
+        content:
+          "Portrait, life traces since 2010, and a Windows-style diary writer.",
+      },
+    ],
+  }),
+  component: Home,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
-function Index() {
+type Trace = { date: string; title: string; body: string };
+
+const TRACES: Trace[] = [
+  {
+    date: "Jan 2010",
+    title: "Setting salaries & Shenzhen MSA bid",
+    body: "Defined salary scales for staff under my charge and drove the feasibility report for the Shenzhen MSA boat management bid. Balancing office demands with picking up my daughter from kindergarten.",
+  },
+  {
+    date: "Feb 2010",
+    title: "Family life & office routines",
+    body: "A cold Beijing winter. Long days in the office reviewing bidding materials, evenings with my daughter and family.",
+  },
+  {
+    date: "Mar 2011",
+    title: "Back to IT business department",
+    body: "Took over the IT business department once again after two and a half years. Traveled to Nanjing to meet Jiangsu MSA leaders and old friends; returned to Beijing for my daughter's birthday.",
+  },
+  {
+    date: "May 2011",
+    title: "Father's illness",
+    body: "Father fainted again during the May Day holiday. Rushed home to care for him. Work stress kept mounting — no relaxation in sight.",
+  },
+  {
+    date: "Jul 2011",
+    title: "Hospitalization arrangements",
+    body: "Traveled home twice to arrange father's hospitalization and to help him settle into an old apartment.",
+  },
+  {
+    date: "Nov 2011",
+    title: "Shanghai — seafarer COC textbook",
+    body: "Four days in Shanghai compiling the English textbook for seafarer COC training. Fierce debates among teachers. Side trips to Kunshan Yangchenghu and a dinner aboard a Shanghai–Osaka cruise liner.",
+  },
+  {
+    date: "Sep 2012",
+    title: "Luoyang & Shanghai business trips",
+    body: "New office computer after four years with the old one. Daughter started at Jinseyaolan Kindergarten. Flew Beijing–Shanghai for the ship surveyor test meeting chaired by Li Shixin.",
+  },
+  {
+    date: "Oct 2012",
+    title: "National surveyor test preparations",
+    body: "Company enforcing stricter rules and regulations in Beijing. Daughter Xinxin began boarding overnight at school to build her character.",
+  },
+  {
+    date: "Jul 2013",
+    title: "Caring for a sick daughter",
+    body: "Xinxin down with fever while her mother was on a Hong Kong business trip. Helped colleagues with apartment hunting and MLC certificate work.",
+  },
+  {
+    date: "Aug 2013",
+    title: "20th anniversary reunion in Hohhot",
+    body: "Attended the 20th-anniversary gathering of the 1989 graduates at Inner Mongolia Normal University. A splendid reunion with classmates I hadn't seen since graduation.",
+  },
+  {
+    date: "Oct 2013",
+    title: "Luoyang pilot test & Guangzhou trip",
+    body: "First time on the express train from Luoyang to Guangzhou. Emergency surveyor test duty week; bidding materials prepared for Tianjin and Dalian ship owners with good results.",
+  },
+  {
+    date: "Jun 2014",
+    title: "Family trip to Australia & New Zealand",
+    body: "An 11-day tour ending June 30. A hectic Sydney Airport morning with baggage limits and last-minute duty-free shopping.",
+  },
+  {
+    date: "Jul 2014",
+    title: "Balcony glass injury",
+    body: "Seriously injured at home by balcony glass. A bitter round-trip through several Beijing hospitals before finally being operated on at Ji Shui Tan — 90 minutes under half-body anesthesia. Recovered gradually.",
+  },
+  {
+    date: "Jan 2015",
+    title: "Reflections and reunions",
+    body: "Continued dinners with old friends and colleagues; navigating work pressure and family life as another year begins.",
+  },
+  {
+    date: "2016–2019",
+    title: "Deepening management responsibility",
+    body: "Grew into broader management roles at the company — mentoring younger colleagues, tightening operations, and continuing to publish papers on marketing and literature in spare time.",
+  },
+  {
+    date: "2020–2022",
+    title: "Pandemic years",
+    body: "Adapted the team to remote and hybrid work through the COVID-19 years. Focused on stability, staff welfare, and keeping client relationships strong through a difficult period.",
+  },
+  {
+    date: "2023–2024",
+    title: "Watching Xinxin grow up",
+    body: "Xinxin moved into her university years — a quieter household and more time for reading, writing, and long walks. Renewed academic writing on marketing.",
+  },
+  {
+    date: "2025–2026",
+    title: "Toward 27+ years with the company",
+    body: "Passed the 27-year mark with the same company since 1999. Focused on being a more responsible manager — steady, principled, patient with people.",
+  },
+];
+
+type DiaryEntry = { id: string; date: string; title: string; body: string };
+const STORAGE_KEY = "ltc-traces-diary-v1";
+
+function Home() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background text-foreground">
+      <header className="border-b border-border">
+        <div className="mx-auto max-w-[1400px] px-6 py-5 flex items-baseline justify-between">
+          <h1 className="text-2xl font-serif tracking-tight">
+            LTC Traces
+          </h1>
+          <p className="text-sm text-muted-foreground font-serif italic">
+            Liang — a life in traces, 2010 to today
+          </p>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-[1400px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[300px_1fr_420px] gap-6">
+        <PortraitColumn />
+        <TracesColumn />
+        <DiaryColumn />
+      </main>
+
+      <footer className="border-t border-border mt-8">
+        <div className="mx-auto max-w-[1400px] px-6 py-4 text-xs text-muted-foreground">
+          © {new Date().getFullYear()} LTC Traces. A personal chronicle.
+        </div>
+      </footer>
     </div>
+  );
+}
+
+function PortraitColumn() {
+  return (
+    <aside className="lg:sticky lg:top-6 lg:self-start">
+      <div className="rounded-lg border border-border bg-card p-5">
+        <img
+          src={portrait}
+          alt="Portrait of Liang"
+          className="w-full rounded-md object-cover aspect-[4/5] mb-4"
+        />
+        <h2 className="font-serif text-xl mb-1">Liang</h2>
+        <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
+          Manager · Writer
+        </p>
+        <div className="space-y-3 text-sm leading-relaxed font-serif">
+          <p>
+            Born in 1970 in a rural village in northern China. Attended local
+            schools through the 1980s.
+          </p>
+          <p>
+            Entered college in 1989, then worked as a teacher for six years
+            before moving to Beijing for a master's degree.
+          </p>
+          <p>
+            Joined his present company in 1999 and has been there for more than
+            27 years, growing into a management role.
+          </p>
+          <p>
+            In spare time, writes theses and papers on literature and
+            marketing. Aims, above all, to be a more responsible person in
+            management.
+          </p>
+        </div>
+      </div>
+    </aside>
+  );
+}
+
+function TracesColumn() {
+  return (
+    <section>
+      <div className="mb-5">
+        <h2 className="font-serif text-2xl">Traces</h2>
+        <p className="text-sm text-muted-foreground">
+          Drawn from diaries kept between 2010 and 2015, continued to the present day.
+        </p>
+      </div>
+      <ol className="relative border-l border-border ml-3 space-y-6">
+        {TRACES.map((t, i) => (
+          <li key={i} className="pl-6 relative">
+            <span className="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-primary" />
+            <div className="text-xs uppercase tracking-widest text-muted-foreground">
+              {t.date}
+            </div>
+            <h3 className="font-serif text-lg mt-1">{t.title}</h3>
+            <p className="text-sm leading-relaxed mt-1 text-foreground/90">
+              {t.body}
+            </p>
+          </li>
+        ))}
+      </ol>
+    </section>
+  );
+}
+
+/* ---------- Windows-style Diary ---------- */
+
+function DiaryColumn() {
+  const [entries, setEntries] = useState<DiaryEntry[]>([]);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [title, setTitle] = useState("");
+  const [body, setBody] = useState("");
+  const [date, setDate] = useState(() => new Date().toISOString().slice(0, 10));
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY);
+      if (raw) setEntries(JSON.parse(raw));
+    } catch {}
+    setLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (loaded) localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
+  }, [entries, loaded]);
+
+  const selected = useMemo(
+    () => entries.find((e) => e.id === selectedId) ?? null,
+    [entries, selectedId],
+  );
+
+  function newEntry() {
+    setSelectedId(null);
+    setTitle("");
+    setBody("");
+    setDate(new Date().toISOString().slice(0, 10));
+  }
+
+  function save() {
+    if (!title.trim() && !body.trim()) return;
+    if (selected) {
+      setEntries((prev) =>
+        prev.map((e) =>
+          e.id === selected.id ? { ...e, title, body, date } : e,
+        ),
+      );
+    } else {
+      const id = crypto.randomUUID();
+      setEntries((prev) => [{ id, title, body, date }, ...prev]);
+      setSelectedId(id);
+    }
+  }
+
+  function open(e: DiaryEntry) {
+    setSelectedId(e.id);
+    setTitle(e.title);
+    setBody(e.body);
+    setDate(e.date);
+  }
+
+  function remove() {
+    if (!selected) return;
+    if (!confirm("Delete this entry?")) return;
+    setEntries((prev) => prev.filter((e) => e.id !== selected.id));
+    newEntry();
+  }
+
+  return (
+    <aside className="lg:sticky lg:top-6 lg:self-start">
+      {/* Windows-classic window chrome */}
+      <div className="win-window">
+        <div className="win-titlebar">
+          <div className="flex items-center gap-2">
+            <div className="win-icon" aria-hidden />
+            <span>Diary — {selected ? "Editing entry" : "New entry"}</span>
+          </div>
+          <div className="flex gap-1">
+            <button className="win-tbtn" aria-label="Minimize">_</button>
+            <button className="win-tbtn" aria-label="Maximize">▢</button>
+            <button className="win-tbtn win-close" aria-label="Close">✕</button>
+          </div>
+        </div>
+
+        <div className="win-menubar">
+          <button className="win-menu" onClick={newEntry}>File</button>
+          <button className="win-menu" onClick={save}>Edit</button>
+          <button className="win-menu">Format</button>
+          <button className="win-menu">View</button>
+          <button className="win-menu">Help</button>
+        </div>
+
+        <div className="win-toolbar">
+          <button className="win-btn" onClick={newEntry}>New</button>
+          <button className="win-btn" onClick={save}>Save</button>
+          <button className="win-btn" onClick={remove} disabled={!selected}>
+            Delete
+          </button>
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            className="win-input ml-auto"
+          />
+        </div>
+
+        <div className="win-body">
+          <input
+            className="win-input w-full mb-2"
+            placeholder="Title (e.g., Rainy day in Beijing)"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <textarea
+            className="win-textarea w-full"
+            placeholder="Dear diary…"
+            value={body}
+            onChange={(e) => setBody(e.target.value)}
+          />
+        </div>
+
+        <div className="win-statusbar">
+          <span>{entries.length} entries saved locally</span>
+          <span>{body.length} chars</span>
+        </div>
+      </div>
+
+      {/* Saved entries list */}
+      <div className="mt-4 win-window">
+        <div className="win-titlebar">
+          <span>My Diary Entries</span>
+        </div>
+        <div className="win-body max-h-80 overflow-auto p-0">
+          {entries.length === 0 ? (
+            <div className="p-4 text-sm text-muted-foreground">
+              No entries yet. Write your first entry above.
+            </div>
+          ) : (
+            <ul className="divide-y divide-[color:var(--win-border)]">
+              {entries.map((e) => (
+                <li key={e.id}>
+                  <button
+                    onClick={() => open(e)}
+                    className={`w-full text-left px-3 py-2 hover:bg-[color:var(--win-hover)] ${
+                      selectedId === e.id ? "bg-[color:var(--win-hover)]" : ""
+                    }`}
+                  >
+                    <div className="text-xs text-muted-foreground">{e.date}</div>
+                    <div className="text-sm font-medium truncate">
+                      {e.title || "(untitled)"}
+                    </div>
+                    <div className="text-xs text-muted-foreground truncate">
+                      {e.body.slice(0, 80)}
+                    </div>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
+      </div>
+    </aside>
   );
 }
