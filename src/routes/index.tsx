@@ -22,13 +22,13 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A personal chronicle of Liang's life traces from 2010 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
+          "A personal chronicle of Liang's life traces from 1989 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
       },
       { property: "og:title", content: "LTC Traces — Liang's Life Traces (1989–Present)" },
       {
         property: "og:description",
         content:
-          "A personal chronicle of Liang's life traces from 2010 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
+          "A personal chronicle of Liang's life traces from 1989 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
       },
     ],
   }),
@@ -38,6 +38,31 @@ export const Route = createFileRoute("/")({
 type Trace = { date: string; title: string; body: string };
 
 const TRACES: Trace[] = [
+  {
+    date: "Sep 1989",
+    title: "Enrolled at Inner Mongolia Normal University",
+    body: "After six hard years in middle school, I was enrolled as an English major at Inner Mongolia Normal University — the first major step away from my rural hometown in northern China.",
+  },
+  {
+    date: "Jul 1993",
+    title: "Became a teacher at Inner Mongolia Finance and Economic Institute",
+    body: "Graduated and was recruited as a teacher by Inner Mongolia Finance and Economic Institute, where I spent the next six years in the classroom.",
+  },
+  {
+    date: "Sep 1995 – Jul 1996",
+    title: "Training at UIBE and the road to Beijing",
+    body: "Went to Beijing for a one-year training program at the University of International Business and Economics (UIBE). I took the master's degree entrance exam and was enrolled by Beijing International Studies University.",
+  },
+  {
+    date: "Jul 1999",
+    title: "Joined Huayang Maritime Center",
+    body: "Recruited by Huayang Maritime Center Co., Ltd. (HMC) in July 1999, beginning what would become more than 27 years with the same company.",
+  },
+  {
+    date: "2004",
+    title: "Promoted to Deputy General Manager of HMC",
+    body: "Promoted to Deputy General Manager of Huayang Maritime Center, a management role I have held ever since.",
+  },
   {
     date: "Jan 2010",
     title: "Setting salaries & Shenzhen MSA bid",
@@ -142,7 +167,7 @@ function Home() {
             LTC Traces
           </h1>
           <p className="text-sm text-muted-foreground font-serif italic">
-            Liang — a life in traces, 2010 to today
+            Liang — a life in traces, 1989 to today
           </p>
         </div>
       </header>
@@ -246,7 +271,7 @@ function TracesColumn() {
       <div className="mb-5">
         <h2 className="font-serif text-2xl">Traces</h2>
         <p className="text-sm text-muted-foreground">
-          Drawn from diaries kept between 2010 and 2015, continued to the present day.
+          Cornerstone events from 1989 onward, drawn from diaries kept between 2010 and 2015, and continued to the present day.
         </p>
       </div>
       <ol className="relative border-l border-border ml-3 space-y-6">
