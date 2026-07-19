@@ -31,7 +31,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "A personal chronicle of Liang's life traces from 1989 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
+          "A personal chronicle of Liang's life traces from 1989 to today, drawn from his diaries.",
       },
       { name: "robots", content: "noindex, nofollow" },
     ],
