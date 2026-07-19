@@ -4,6 +4,18 @@ import { useEffect, useMemo, useState } from "react";
 import { checkUnlocked, lockSite } from "@/lib/gate.functions";
 import portrait from "@/assets/portrait.jpg";
 import zmsaSpeech from "@/assets/liang-zmsa-speech.png.asset.json";
+import liang1Inch2005 from "@/assets/liang-1inch-2005.jpg.asset.json";
+
+type MemorablePhoto = { date: string; title: string; image: string; caption?: string };
+
+const MEMORABLE_PHOTOS: MemorablePhoto[] = [
+  {
+    date: "2005",
+    title: "One-Inch ID Photo",
+    image: liang1Inch2005.url,
+    caption: "A one-inch ID portrait taken in 2005 — a year after being promoted to Deputy General Manager at HMC.",
+  },
+];
 import { DIARY_ARCHIVE, type ArchivedDiaryEntry } from "@/data/diary-archive";
 
 type MemorableEvent = { date: string; title: string; image?: string; body: string };
@@ -192,10 +204,11 @@ function Home() {
       </header>
 
 
-      <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[280px_1fr_1fr] gap-6">
+      <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[260px_1fr_1fr_320px] gap-6">
         <PortraitColumn />
         <TracesColumn />
         <MemorableEventsColumn />
+        <MemorablePhotosColumn />
       </main>
 
       <ArchiveSection />
@@ -412,6 +425,44 @@ function TracesColumn() {
           </li>
         ))}
       </ol>
+    </section>
+  );
+}
+
+function MemorablePhotosColumn() {
+  return (
+    <section>
+      <div className="mb-5">
+        <h2 className="font-serif text-2xl">Memorable Photos</h2>
+        <p className="text-sm text-muted-foreground">
+          Photographs kept close — added over time.
+        </p>
+      </div>
+      <div className="space-y-6">
+        {MEMORABLE_PHOTOS.map((p, i) => (
+          <figure
+            key={i}
+            className="rounded-lg border border-border bg-card overflow-hidden"
+          >
+            <img
+              src={p.image}
+              alt={p.title}
+              className="w-full object-cover"
+            />
+            <figcaption className="p-4">
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                {p.date}
+              </div>
+              <h3 className="font-serif text-lg mt-1">{p.title}</h3>
+              {p.caption && (
+                <p className="text-sm leading-relaxed mt-2 text-foreground/90">
+                  {p.caption}
+                </p>
+              )}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
     </section>
   );
 }
