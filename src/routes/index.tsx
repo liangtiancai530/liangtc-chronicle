@@ -19,6 +19,12 @@ const MEMORABLE_EVENTS: MemorableEvent[] = [
 ];
 
 export const Route = createFileRoute("/")({
+  beforeLoad: async () => {
+    const { unlocked } = await checkUnlocked();
+    if (!unlocked) {
+      throw redirect({ to: "/unlock" });
+    }
+  },
   head: () => ({
     meta: [
       { title: "LTC Traces — Liang's Life Traces (1989–Present)" },
@@ -27,12 +33,7 @@ export const Route = createFileRoute("/")({
         content:
           "A personal chronicle of Liang's life traces from 1989 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
       },
-      { property: "og:title", content: "LTC Traces — Liang's Life Traces (1989–Present)" },
-      {
-        property: "og:description",
-        content:
-          "A personal chronicle of Liang's life traces from 1989 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
-      },
+      { name: "robots", content: "noindex, nofollow" },
     ],
   }),
   component: Home,
