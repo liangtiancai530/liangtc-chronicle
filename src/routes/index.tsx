@@ -230,7 +230,7 @@ function Home() {
       </header>
 
 
-      <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[260px_1fr_1fr_320px] gap-6">
+      <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[260px_1fr_1fr_320px] gap-6 items-start">
         <PortraitColumn />
         <TracesColumn />
         <MemorableEventsColumn />
@@ -430,27 +430,29 @@ function MemorableEventsColumn() {
 
 function TracesColumn() {
   return (
-    <section>
+    <section className="flex flex-col h-full">
       <div className="mb-5">
         <h2 className="font-serif text-2xl">Traces</h2>
         <p className="text-sm text-muted-foreground">
           Cornerstone events from 1989 onward, drawn from diaries kept between 2010 and 2015, and continued to the present day.
         </p>
       </div>
-      <ol className="relative border-l border-border ml-3 space-y-6">
-        {TRACES.map((t, i) => (
-          <li key={i} className="pl-6 relative">
-            <span className="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-primary" />
-            <div className="text-xs uppercase tracking-widest text-muted-foreground">
-              {t.date}
-            </div>
-            <h3 className="font-serif text-lg mt-1">{t.title}</h3>
-            <p className="text-sm leading-relaxed mt-1 text-foreground/90">
-              {t.body}
-            </p>
-          </li>
-        ))}
-      </ol>
+      <div className="relative flex-1 max-h-[calc(100vh-220px)] overflow-y-auto pr-2 -mr-2">
+        <ol className="relative border-l border-border ml-3 space-y-4 pb-2">
+          {TRACES.map((t, i) => (
+            <li key={i} className="pl-6 relative">
+              <span className="absolute -left-[7px] top-2 w-3 h-3 rounded-full bg-primary" />
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                {t.date}
+              </div>
+              <h3 className="font-serif text-base mt-1">{t.title}</h3>
+              <p className="text-sm leading-snug mt-1 text-foreground/90">
+                {t.body}
+              </p>
+            </li>
+          ))}
+        </ol>
+      </div>
     </section>
   );
 }
