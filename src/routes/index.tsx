@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import portrait from "@/assets/portrait.jpg";
 import zmsaSpeech from "@/assets/liang-zmsa-speech.png.asset.json";
+import { DIARY_ARCHIVE, type ArchivedDiaryEntry } from "@/data/diary-archive";
 
 type MemorableEvent = { date: string; title: string; image?: string; body: string };
 
