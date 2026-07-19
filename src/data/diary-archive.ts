@@ -102,6 +102,100 @@ export const DIARY_ARCHIVE: ArchivedDiaryYear[] = [
     ],
   },
   {
+    year: "2012",
+    entries: [
+      {
+        id: "2012-09-18",
+        date: "Sep 18, 2012",
+        weather: "Rainy in Luoyang, 29 °C",
+        body:
+          "On board from Luoyang to Beijing — my fourth trip to Luoyang, just one day there before turning back. New office computer this week after four years with the old one; I loved the old machine because I'd used it so long.\n\nStrong Chinese reaction to Japan's declaration of buying the Diaoyu Islands — I don't think war between China and Japan would be a good idea. Xinxin has been at Jinseyaolan Kindergarten for two weeks and seems to enjoy herself. Planning to invite two people out for dinner this week.",
+      },
+      {
+        id: "2012-09-23",
+        date: "Sep 23, 2012",
+        weather: "Sunny in Beijing, 29 °C",
+        body:
+          "On board a night flight (1925, 30 minutes late) from Beijing to Shanghai. Busy days for work and family — this afternoon I picked up a Danish group at Beijing South Station, delivered them to the Paragon Hotel, adjusted their Beijing programme and headed straight to the airport.\n\nTomorrow: a Shanghai meeting on the ship surveyor test, with leaders speaking and details to be worked out, then an early flight back for more work. Hoping Second Auntie can come to Beijing again to look after Xinxin, who is also busy at primary school. Last week I helped a middle-school classmate whose son is studying law in Hubei.",
+      },
+      {
+        id: "2012-09-24",
+        date: "Sep 24, 2012",
+        weather: "Sunny in Shanghai, 28 °C",
+        body:
+          "On the flight from Shanghai back to Beijing — my eighth Shanghai trip this year. Li Shixin chaired the surveyor national-test meeting this morning; he was very concerned about safety and security. I'm worried too — this is a demanding test and the IT side is largely out of our control — but we'll spare no effort and I don't expect major trouble.\n\nTook the earliest flight back (still more than an hour late) to prepare for tomorrow: office work, booking a restaurant for students, and other bits. Wednesday: a bid opening on our side, a Dalian trip on surveyor test reform, and more.",
+      },
+      {
+        id: "2012-10-16",
+        date: "Oct 16, 2012",
+        weather: "Rainy morning, 20 °C; windy and cooler in the afternoon",
+        body:
+          "A cool, rainy morning — autumn has come and winter is on the way. Xinxin stayed overnight at school. She was very reluctant, but we insisted because it's a good way to build her character.\n\nThe company is enforcing rules and regulations strictly in Beijing — putting the pressure on those who keep breaking them. Handled several things today to keep pace with the market.",
+      },
+      {
+        id: "2012-12-28",
+        date: "Dec 28, 2012",
+        weather: "Cloudy and cold, −10 °C at night",
+        body:
+          "Almost two months without a diary. On Nov 11 my dad passed away and I went home to arrange the funeral. He'd been in a very bad state since coming home last spring. A hard lesson for us all.\n\nThe past month has been full of IT and ship-management business. A cold winter since Nov 1 — several snowfalls, none heavy, but the cold has held. Second Auntie has been with us since late October and has been a huge help; I don't know if she'll be able to stay next year. Xinxin is getting more and more wilful, harder to persuade. Huayang has had a good year — the bonus should be decent.",
+      },
+    ],
+  },
+  {
+    year: "2013",
+    entries: [
+      {
+        id: "2013-01-24",
+        date: "Jan 24, 2013",
+        weather: "Cloudy and cold, −7 °C at night",
+        body:
+          "On the flight from Shanghai to Beijing — a month without a diary. Luoyang for a three-day meeting, then a rough domestic flight to Hefei on Monday night, then Shanghai by high-speed train for two meetings — a project close-out and a seafarer-management department session.\n\nI really dislike days on the road: alcohol every day, too much fatty food. But as a senior manager I have to travel more often than not. Watching people who've worked long years in government, most don't end well — they get too caught up in power struggles. Most people can't resist food, sex, money, or power. Looking forward to seeing Xinxin and being at home with her for a while.",
+      },
+      {
+        id: "2013-02-17",
+        date: "Feb 17, 2013",
+        weather: "Cloudy and cold, −7 °C at night",
+        body:
+          "Second day back at work after Lunar New Year. A fierce quarrel with my wife last night — still furious. Sorry for Xinxin, who shouldn't have to see this — she's still innocent and shouldn't be exposed to that kind of violence in her parents. I believe divorce is unavoidable, though it will be bad for her.\n\nSpent much of Spring Festival on my own. I had no interest in going home — my father passed away months ago, and the struggles among brothers and sisters during his illness left me sad. New year, new resolutions; but growing the business gets harder every year.",
+      },
+      {
+        id: "2013-04-01",
+        date: "Apr 1, 2013",
+        weather: "Sunny, slightly hazy; 15 °C daytime, −2 °C night",
+        body:
+          "On the flight from Beijing to Shanghai to visit Huaneng Ruining and Gutou Shipping, two important Huayang ship-management clients. Captain Ren and I plan to speak with Zhou and Zhang about our service and their complaints about recent incidents on Leading Bravery and other vessels.\n\nBeijing's air has been thick with pollution this spring, and most people expect it to last for years — this city has grown too fast, with too many cars on the road. Another reason I'd like to see my wife and daughter move to a country with cleaner air and water. Last week we passed the US embassy visa interview very smoothly and were granted tour visas immediately. April 30 we'll fly to the US together for about two weeks. Three days outside Beijing this trip — Shanghai, Xiamen, maybe Nantong. Also guided three Canadian ladies who were unhappy about a hotel's extra one-night charge.",
+      },
+      {
+        id: "2013-05-01",
+        date: "May 1, 2013",
+        weather: "30 °C in Honolulu, sunny and clear",
+        body:
+          "Two days in Honolulu — arrived 9 am April 30, leaving 7 am May 1. On the way we spent about 8 hours in Narita Airport unable to leave the terminal without a Japan visa, but we ate some Japanese noodles.\n\nStraight from the airport to Pearl Harbor — the museum and imitation weapons were striking; extraordinary that the US was attacked that way by such a small nation. Brief stop at the Hawaii State Capitol and the last emperor's palace (only 20 minutes) before checking into the hotel. Then straight to Waikiki Beach for an hour's swim and an open-air shower with other Americans, followed by a Chinese-restaurant dinner and an evening walk along the canal.\n\nUp at 6 next morning, jogged about 4 km along the canal — wonderful air, beautiful scenery, plenty of Americans running too. An around-the-island tour with four stops, then a shopping detour that ate too much time. In the afternoon Xinxin and my wife went to a floating food show; I went back to the beach, watched Americans surfing, swam another hour. Japanese buffet dinner for $30. Packed and to bed at midnight, up again at 4:30 for the airport. Hawaii was memorable but too short — too much time on shopping and not enough on the sights.",
+      },
+      {
+        id: "2013-05-13",
+        date: "May 13, 2013",
+        weather: "24 °C in New York, sunny and clear",
+        body:
+          "US trip ends today — left the NY hotel at 9:30 for JFK, 1.5 hours to the airport, then check-in and buying gifts. Two bottles of wine meant for my boss were confiscated by Japanese customs.\n\nA fantastic trip overall: rented cars in Los Angeles and Las Vegas, studied two EB-5 projects, looked deeply into US primary and middle-school education, and talked to locals whenever possible. Tiring though — the itinerary, jet lag and anxiety wore me down. Grateful to Mr. Guo for the NY day tour (Princeton University, several middle schools). Princeton is a wonderful place to live and study. Weather was fine — just a brief shower and some chill. Guiding services weren't great; too much extra money to the guides. When home, I'll write some articles about this trip for the magazines.",
+      },
+      {
+        id: "2013-07-22",
+        date: "Jul 22, 2013",
+        weather: "Cloudy and misty, about 30 °C",
+        body:
+          "Xinxin has had a cold for days and got a fever again today. Her mother is on a Hong Kong business trip, so I need to get home to check on her as soon as possible. Busy last weekend helping Wang Lu find a serviced apartment for Yuan's daughter, and helping Tiankuo with her MLC certificate printing.\n\nPlanning a visit to Hohhot on the 26th — looking forward to seeing classmates I haven't met in a long time.",
+      },
+      {
+        id: "2013-08-07",
+        date: "Aug 7, 2013",
+        weather: "Cloudy in Beijing, 34 °C",
+        body:
+          "On the way from Beijing to Luoyang — waited nearly five hours before take-off. Yesterday in Tanggu for a ship-management business meeting where the ship owner had plenty of criticism for us. That kind of venue is where we really hear our clients on the issues that matter.",
+      },
+    ],
+  },
+  {
     year: "2014",
     entries: [
       {
