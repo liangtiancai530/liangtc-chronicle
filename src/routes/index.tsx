@@ -428,3 +428,41 @@ function TracesColumn() {
     </section>
   );
 }
+
+function MemorablePhotosColumn() {
+  return (
+    <section>
+      <div className="mb-5">
+        <h2 className="font-serif text-2xl">Memorable Photos</h2>
+        <p className="text-sm text-muted-foreground">
+          Photographs kept close — added over time.
+        </p>
+      </div>
+      <div className="space-y-6">
+        {MEMORABLE_PHOTOS.map((p, i) => (
+          <figure
+            key={i}
+            className="rounded-lg border border-border bg-card overflow-hidden"
+          >
+            <img
+              src={p.image}
+              alt={p.title}
+              className="w-full object-cover"
+            />
+            <figcaption className="p-4">
+              <div className="text-xs uppercase tracking-widest text-muted-foreground">
+                {p.date}
+              </div>
+              <h3 className="font-serif text-lg mt-1">{p.title}</h3>
+              {p.caption && (
+                <p className="text-sm leading-relaxed mt-2 text-foreground/90">
+                  {p.caption}
+                </p>
+              )}
+            </figcaption>
+          </figure>
+        ))}
+      </div>
+    </section>
+  );
+}
