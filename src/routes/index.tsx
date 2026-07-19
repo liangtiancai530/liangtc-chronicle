@@ -4,6 +4,18 @@ import { useEffect, useMemo, useState } from "react";
 import { checkUnlocked, lockSite } from "@/lib/gate.functions";
 import portrait from "@/assets/portrait.jpg";
 import zmsaSpeech from "@/assets/liang-zmsa-speech.png.asset.json";
+import liang1Inch2005 from "@/assets/liang-1inch-2005.jpg.asset.json";
+
+type MemorablePhoto = { date: string; title: string; image: string; caption?: string };
+
+const MEMORABLE_PHOTOS: MemorablePhoto[] = [
+  {
+    date: "2005",
+    title: "One-Inch ID Photo",
+    image: liang1Inch2005.url,
+    caption: "A one-inch ID portrait taken in 2005 — a year after being promoted to Deputy General Manager at HMC.",
+  },
+];
 import { DIARY_ARCHIVE, type ArchivedDiaryEntry } from "@/data/diary-archive";
 
 type MemorableEvent = { date: string; title: string; image?: string; body: string };
