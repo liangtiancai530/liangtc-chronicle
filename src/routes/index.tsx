@@ -159,9 +159,6 @@ const TRACES: Trace[] = [
   },
 ];
 
-type DiaryEntry = { id: string; date: string; title: string; body: string };
-const STORAGE_KEY = "ltc-traces-diary-v1";
-
 function Home() {
   const router = useRouter();
   const lock = useServerFn(lockSite);
