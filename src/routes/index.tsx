@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useMemo, useState } from "react";
 import portrait from "@/assets/portrait.jpg";
 import zmsaSpeech from "@/assets/liang-zmsa-speech.png.asset.json";
+import { DIARY_ARCHIVE, type ArchivedDiaryEntry } from "@/data/diary-archive";
 
 type MemorableEvent = { date: string; title: string; image?: string; body: string };
 
@@ -179,12 +180,117 @@ function Home() {
         <DiaryColumn />
       </main>
 
+      <ArchiveSection />
+
       <footer className="border-t border-border mt-8">
         <div className="mx-auto max-w-[1400px] px-6 py-4 text-xs text-muted-foreground">
           © {new Date().getFullYear()} LTC Traces. A personal chronicle.
         </div>
       </footer>
     </div>
+  );
+}
+
+/* ---------- Diary Archive (2009–2018) ---------- */
+
+function ArchiveSection() {
+  const years = DIARY_ARCHIVE.map((y) => y.year);
+  const [activeYear, setActiveYear] = useState(years[0]);
+  const [selected, setSelected] = useState<ArchivedDiaryEntry | null>(
+    DIARY_ARCHIVE[0]?.entries[0] ?? null,
+  );
+
+  const yearData = DIARY_ARCHIVE.find((y) => y.year === activeYear)!;
+
+  function pickYear(y: string) {
+    setActiveYear(y);
+    const first = DIARY_ARCHIVE.find((yy) => yy.year === y)?.entries[0] ?? null;
+    setSelected(first);
+  }
+
+  return (
+    <section className="mx-auto max-w-[1600px] px-6 pb-12">
+      <div className="mb-5">
+        <h2 className="font-serif text-2xl">Diary Archive · 2009–2018</h2>
+        <p className="text-sm text-muted-foreground">
+          Selected entries from Liang's personal diaries — travel, family,
+          business trips, and the hard seasons. Read-only.
+        </p>
+      </div>
+
+      <div className="win-window">
+        <div className="win-titlebar">
+          <div className="flex items-center gap-2">
+            <div className="win-icon" aria-hidden />
+            <span>Diary Archive — {activeYear}</span>
+          </div>
+        </div>
+        <div className="win-menubar">
+          {years.map((y) => (
+            <button
+              key={y}
+              className="win-menu"
+              onClick={() => pickYear(y)}
+              style={{
+                fontWeight: y === activeYear ? 700 : 400,
+                textDecoration: y === activeYear ? "underline" : "none",
+              }}
+            >
+              {y}
+            </button>
+          ))}
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-[260px_1fr]">
+          <ul className="win-body md:border-r divide-y divide-[color:var(--win-border)] max-h-[520px] overflow-auto p-0">
+            {yearData.entries.map((e) => (
+              <li key={e.id}>
+                <button
+                  onClick={() => setSelected(e)}
+                  className={`w-full text-left px-3 py-2 hover:bg-[color:var(--win-hover)] ${
+                    selected?.id === e.id ? "bg-[color:var(--win-hover)]" : ""
+                  }`}
+                >
+                  <div className="text-xs text-muted-foreground">{e.date}</div>
+                  {e.weather && (
+                    <div className="text-[11px] text-muted-foreground italic">
+                      {e.weather}
+                    </div>
+                  )}
+                  <div className="text-xs text-muted-foreground truncate mt-1">
+                    {e.body.slice(0, 60)}…
+                  </div>
+                </button>
+              </li>
+            ))}
+          </ul>
+          <div className="win-body max-h-[520px] overflow-auto">
+            {selected ? (
+              <article>
+                <header className="mb-3">
+                  <h3 className="font-serif text-lg">{selected.date}</h3>
+                  {selected.weather && (
+                    <p className="text-xs italic text-muted-foreground">
+                      {selected.weather}
+                    </p>
+                  )}
+                </header>
+                <div className="text-sm leading-relaxed whitespace-pre-wrap font-serif">
+                  {selected.body}
+                </div>
+              </article>
+            ) : (
+              <p className="text-sm text-muted-foreground">
+                Select an entry from the list.
+              </p>
+            )}
+          </div>
+        </div>
+        <div className="win-statusbar">
+          <span>{yearData.entries.length} entries in {activeYear}</span>
+          <span>{selected ? `${selected.body.length} chars` : ""}</span>
+        </div>
+      </div>
+    </section>
   );
 }
 
