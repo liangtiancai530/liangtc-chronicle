@@ -284,4 +284,313 @@ export const DIARY_ARCHIVE: ArchivedDiaryYear[] = [
       },
     ],
   },
+  {
+    year: "2019",
+    entries: [
+      {
+        id: "2019-06-16",
+        date: "Jun 16, 2019",
+        weather: "Cloudy, rainy in the afternoon",
+        body:
+          "A furious morning. I was angry that Huaite encouraged Tina not to eat what I had cooked in the morning, and I threw away the food she had prepared with the cook. She was so mean and disappointing — I really do not want to continue this marriage at all.",
+      },
+      {
+        id: "2019-08-04",
+        date: "Aug 4, 2019 — South Africa & Egypt tour",
+        body:
+          "A long summer tour with the family. Jul 14 — left for Terminal 3 at 3:30 pm, transited Shenzhen. Jul 15 — landed Johannesburg, flew on to Cape Town; Table Mountain, Signal Hill, Robben Island where Mandela was jailed 28 years. Jul 16 — Cape Point, Simon's Town navy base, penguins at Boulders Beach, Hout Bay's Seal Island (the boat was so bumpy I was frightened), then the cable car up Table Mountain and the old lighthouse.\n\nJul 17 — Malay Colourful Area, Franschhoek by shuttle train, wine tasting at a vineyard; night flight to Johannesburg, Misty Hill Country Hotel. Jul 18 — Sun City, Pilanesberg game drive (elephants, hippos, leopards, buffalo); won 400 rand at the casino. Jul 19 — Voortrekker Monument in Pretoria (highlight of the trip), Union Buildings and Mandela's statue; night flight to Cairo.\n\nJul 20 — Giza pyramids and Sphinx; tried to enter Khufu but too crowded and hot; Egyptian Museum; flew south to Luxor. Jul 21 — Valley of the Kings (too hot to leave the bus), Karnak-era temples, then to Hurghada; swam in the Red Sea and touched real coral for the first time. Jul 22 — glass-bottom boat over the Red Sea. Jul 23 — long drive back to Cairo. Jul 24 — Memphis, statue of Ramesses II, papyrus workshop, then home via a 9-hour flight to Beijing. Goodbye South Africa and Egypt!",
+      },
+      {
+        id: "2019-09-07",
+        date: "Sep 7, 2019",
+        weather: "Sunny, very hot, 34 °C",
+        body:
+          "Writing at a Zilihangjian study session with my daughter and Huate. This afternoon, dinner with friends in Yanjiao. Last month, after Egypt, I travelled for business to Yanzhou, Zhoushan, Shanghai, Guangxi and Beihai, visiting two or three new-build or newly delivered ships — good service prospects. Tried but failed to apply for the Beijing scholarship for lack of time to submit materials. September will be busy — receiving the Greek basketball team and other groups — but my focus is on helping Tina prepare for her Nov 2 TOEFL.",
+      },
+      {
+        id: "2019-11-20",
+        date: "Nov 20–27, 2019 — Norway & Greece",
+        body:
+          "Nov 20 — departed midnight for Oslo via Copenhagen and SAS 1462, checked into Quality Hotel 33, then to Wilhelmsen HQ to meet Jon and Steine from Norsea, brief courtesy call on Bjoerge, then a seafood dinner in the harbour with Jan, Geire, Schou and Bjorn in heavy rain. Fined 600 NOK for parking.\n\nNov 21–22 — drove five hours to Kristiansand in rain; met Bjorn at his old-town office and talked three hours about Chinese seafarer crewing, offshore ship repair, Iran business, Batservice group. Moose-meat dinner at the Bjorns' home.\n\nNov 23 — 4 am checkout, flew Kristiansand → Amsterdam via KLM 1206. Half a day in Amsterdam: Dam Square, Parliament, one hour in the Van Gogh Museum (19 €), then the Rijksmuseum, then flew to Athens. Nov 24 — climbed the Acropolis and the Theatre of Dionysos with the old boss Mao, visited the Acropolis Museum (just visited by President Xi ten days earlier), Constitution Square, Parliament. Nov 25 — client visits at BPS and a seaside seafood lunch; COSCO dinner in the evening. Nov 26 — Acropolis, Roman & Greek markets, library, then a lamb barbecue with COSCO. Nov 27 — flew back to Beijing on CA 864, home at 6 am, three hours' sleep, then to the office.",
+      },
+    ],
+  },
+  {
+    year: "2020",
+    entries: [
+      {
+        id: "2020-04-21",
+        date: "Apr 21, 2020",
+        weather: "Windy and freezing, ~10 °C",
+        body:
+          "Almost half a year without a diary — the reason is the coronavirus pandemic, which has locked down almost the whole world. I have not travelled outside Beijing for nearly three months. Since Lunar New Year the virus has escalated in China and then worldwide; more than 160,000 people have died. We have been on a stay-at-home plus office model; next week we return to normal office work.\n\nUnfortunately I have suffered another illness — tinnitus cerebra. Hospital checks also found some blockage in the blood vessels of my brain and neck, so I am on a lot of medicine for cholesterol, prostate and blood-vessel problems. The head ringing gets more serious by the day and I fear it will not be solved quickly. Two years ago at almost the same time I suffered depression, a facial tumour and other issues; surgery and medicine conquered those, and I hope these will be conquered too. The three of us are at least spending more time together; Tina is preparing for SSAT and TOEFL for June or July.",
+      },
+      {
+        id: "2020-04-23",
+        date: "Apr 23, 2020",
+        weather: "Sunny but windy",
+        body:
+          "A shadowy year so far. First a loss of about US$3,000 in HSBC wealth management, then some 20,000 more in the crude-oil ETF. But most annoying is the tinnitus cerebra and a return of the depression. Every day I take medicines for cholesterol, vascular blockage and brain ringing. Life feels hard this year — hopefully I recover from the brain ringing soon, it is a very annoying sickness.",
+      },
+    ],
+  },
+  {
+    year: "2022",
+    entries: [
+      {
+        id: "2022-12-15",
+        date: "Dec 15, 2022 · Thursday",
+        weather: "−12 °C, sunny in Beijing",
+        body:
+          "COVID — it has finally reached me. Luckily my wife has not caught it yet, so she takes care of me. The first night was awful: no sleep at all, sharp joint aches, digestion upset. Yesterday I had a 39 °C fever and felt cold under two quilts, but Panadol works well — three tablets made me comfortable enough to hold two online meetings with clients and Tina's counsellors in the US. Today I feel better; temperature down to 37 °C and I can walk outside for a while. Tina starts her Christmas holidays the day after tomorrow — she has been anxious with homework; I told her to stop studying earlier in the evening and sleep sooner.",
+      },
+      {
+        id: "2022-12-19",
+        date: "Dec 19, 2022",
+        weather: "Sunny but cold, −10 °C",
+        body:
+          "Sixth day with COVID; feeling better. Yesterday I jogged 5 km in Wenyu Park; today, after a bidding evaluation, another 4.5 km in Yuyuantan Park. Very few tourists — a very different place from the crowded summer scenes I saw three times this year. Tina has arrived in LA for two weeks of Christmas holidays.",
+      },
+    ],
+  },
+  {
+    year: "2023",
+    entries: [
+      {
+        id: "2023-01-10",
+        date: "Jan 10, 2023",
+        weather: "Sunny, 10 °C in Beijing",
+        body:
+          "Group New Year greeting video in the meeting room this morning; then to China-Japan Hospital for an eye check — diagnosed with epipephysitis in the right eye, cause unclear, probably COVID-related. Got eye drops. Last week I was in Tanggu for business — met MSA and Minsheng Leasing clients — but drank several times and worsened my post-COVID state. Thursday I fly to Shanghai and Zhoushan; hopefully less alcohol. I have been swimming in cold water at Dongzhimen since December; another eight-minute swim there today.",
+      },
+      {
+        id: "2023-01-24",
+        date: "Jan 24, 2023",
+        weather: "Sunny, very cold, −15 °C at night",
+        body:
+          "Two weeks of travel — Shanghai, Ningbo, Zhoushan, then Pingdingshan for a family reunion with the parents-in-law. Chest pain and shortness of breath keep growing; CT and blood tests find little, but different doctors give different explanations — some say normal post-COVID, others warn of long COVID. I need to slow down. In Pingdingshan I visited Baiguishan Reservoir, the new town, Hilltop Park (beautiful but poorly managed for tourist safety), the pedestrian street and Wanda Square. In Shanghai and Ningbo, met key clients — feedback on our services is positive. Decided to rest at home for a while and recover.",
+      },
+      {
+        id: "2023-02-14",
+        date: "Feb 14, 2023",
+        weather: "Cloudy, cold, −5 °C",
+        body:
+          "First full day in the office after Lunar New Year. After the holiday I drank two meals with liquor in Tanggu; chest pain, shortness of breath and violent heart palpitations have lasted more than 30 days. Yesterday afternoon the pain was unbearable and I went to Anzhen Hospital's emergency; nothing serious found. Tomorrow, results of a coronary CTA. If nothing shows up, my only remedy is more rest. Before and after Lunar New Year I toured Shanghai, Ningbo and Zhoushan with Li Liqian and other Huayang managers; then Pingdingshan; then Dalian right after Jan 31, visiting Chunan and Xinfeng, dinners with MSA and DMU cadres. Then Tanggu for three days — inter-division exchange, dinner with staff, interviewing candidates for deputy/assistant deputy GM of the ship-management division. Last Thursday flew to Guangzhou — Guangdong Shipping, Jiaoyin Leasing, Yuedian Shipping; colleagues drank heavily. I swam twice in the hotel's natural- and hot-water pools — fantastic. Also visited the Huanghuagang 72 Martyrs' tombs and Yuexiu Park — Guangzhou has both historic and modern charm.",
+      },
+      {
+        id: "2023-03-06",
+        date: "Mar 6, 2023",
+        weather: "Smoggy but warm, 21 °C",
+        body:
+          "In the past month, back at Anzhen Hospital several times; a left coronary artery is 50% blocked, and I was hospitalised for three days. Prescribed a lot of medicine, but Bisulfate and Aspirin bother my stomach/intestines and I stopped them last week. The message is clear: pay more attention to health — some diseases are in my genes, others come from aging and long-term unhealthy habits. Diet and more exercise needed. Also managing long-COVID symptoms — heart still beats faster than normal, cannot exercise long. Severe insomnia last night — asleep near 2 am — but not tired today. Visited Tanggu last week; the Russian clients were fiercely patriotic and sure Russia will win in Ukraine. No alcohol for some time — good, given all the medicine.",
+      },
+      {
+        id: "2023-04-06",
+        date: "Apr 6, 2023",
+        weather: "Cool and windy, air clean, 18 °C",
+        body:
+          "Beijing's golden spring — lilac, peony, cherry, begonia, plum all in blossom. Yesterday, Tina, her mother and I walked 6 km in the Old Summer Palace, finding places we had never seen before. This afternoon I fly with Tina to Xiamen for her onward flight to the US, then to Quanzhou (first time) to meet Xingtong Maritime. Saturday I fly to Luoyang for Huayang's annual meeting — several sessions on performance, ship-management trends, IT management; need to prepare speeches. Apr 13 to Yangzhou for a new-build ceremony, then five days of Party School study.",
+      },
+      {
+        id: "2023-05-03",
+        date: "May 3, 2023",
+        weather: "Warm, windy, 30 °C in Beijing",
+        body:
+          "Fifth day of the May holidays; slept until 9:30 after returning at 3 am from Shenyang. May 1–2 spent visiting my ailing second uncle-in-law and second auntie, with sightseeing in Shenyang — the Marshal Zhang Xueliang & Zhang Zuolin residence, the outside of the Forbidden City, the 918 Memorial Hall, the North Tomb. My uncle-in-law recovered well after surgery. Food only so-so, sights impressive but very crowded. Met Jiang Kai, a good friend of Wang Lu — no alcohol, which was good.",
+      },
+      {
+        id: "2023-05-16",
+        date: "May 16, 2023",
+        weather: "Sunny but foggy, 36 °C",
+        body:
+          "Tested positive for COVID yesterday — very mild. Symptoms confined to throat and nose, no fever. Cautious, given how badly the first infection hit me. Cancelled the Qinhuangdao trip. At home I researched UK university applications through UCAS; not many majors match Tina's plan compared with the US or Canada — UK looks hard. Tomorrow I am meeting guests from Ruining Shipping.",
+      },
+      {
+        id: "2023-06-15",
+        date: "Jun 15, 2023",
+        weather: "35 °C in Beijing",
+        body:
+          "Handed over and took over jobs in Huayang. Fortunately I no longer run ship management — a high-risk business — but I take over information technology, a big challenge. No more frequent Tanggu trips for safety oversight. Hope to be less nervous with work and focus more on my health. Tina has been home for weeks preparing for her SAT next week.",
+      },
+      {
+        id: "2023-08-11",
+        date: "Aug 11, 2023",
+        weather: "35 °C, in Beijing",
+        body:
+          "Saturday in the office with Tina, both working on SAT practice and other tasks. Tina has been preparing for the Aug 26 SAT for about 20 days; the practice seems to be working. Twelve days until she leaves for the US again. Early August brought roughly 400 mm of rain in Beijing — unprecedented; hundreds died. Similar disaster in Maui, where the whole city was flattened by fire. Climate change is moving at unprecedented speed. My new remit — HR, new marketing business and IT — is new to me and I am adjusting.",
+      },
+      {
+        id: "2023-09-17",
+        date: "Sep 17, 2023",
+        body:
+          "Long time since I wrote. Last week — Tianjin and Jinan for two meetings; the Jinan session was wonderful — learned about blockchain and how it might be used in seafaring software. Sightseeing in Jinan: Baotu Spring, Jiefangge, Daminghu — unique scenery, beautiful weather; wanted to swim in a spring but missed the timing. Tina scored 1510 on SAT on Aug 26 — not so good, not so bad. She will take another one for trial. This is application season; hope for good results in the long run.",
+      },
+      {
+        id: "2023-11-05",
+        date: "Nov 5, 2023 · Sunday — Hong Kong & Singapore",
+        weather: "Hot & sunny in Singapore, 34 °C; cold & cloudy in Beijing, 10 °C",
+        body:
+          "Flew Singapore → Beijing today after a seven-day trip.\n\nDay 1 (Oct 30) — Beijing → Hong Kong; Wen and Zhou met me and we drove to Royal Garden Hotel in Kowloon, near the office and facing HK Island. Visited HK University in the afternoon — Tina not qualified for business majors. Seafood buffet dinner with the four staff; but limited by post-COVID appetite. Felt dizzy that afternoon.\n\nDay 2 (Oct 31) — morning run along the coast to Kowloon Park; signed BOC HK documents at the office; long chat with Wen on the business. Afternoon at CUHK — big, beautiful campus; asked a young teacher through a fence window about admissions — Tina may qualify for some majors. HK Poly wouldn't let outsiders in; back to hotel for dinner, sauna on the 17th floor.\n\nDay 3 (Nov 1) — one-hour subway + bus 11 to HKUST; met a Chinese visiting scholar who guided me to admissions — a helpful young officer, Tina seems to qualify. Back to hotel, then with Wen and Zhou to HK Marine Department for a two-hour meeting with Mr Wang and Mr Zhou. Seafood dinner opposite the hotel with old friend Qiu Wei.\n\nDay 4 (Nov 2) — 6 am checkout, SQ899 HK → Singapore, ~3 hours; Wang Yaoting met me and we drove to PARKROYAL on Beach Road. Visited the office, then NUS — I was not surprised to hear NUS requires five APs. Hotpot dinner with Wang (too hot, no alcohol); night walk to Marina Bay and to the WWII memorial with four pillars for the four peoples of Singapore.\n\nDay 5 (Nov 3) — morning run near the Istana; taxi to the Wilhelmsen office to meet Jamie — chatted about the four years since, and the business competition we had. Then Singapore Management University with Wang — admission office manned by two students who answered many questions.\n\nHome now — dinners along the way and a lot learned about our clients' overseas offices and about the schools Tina might attend.",
+      },
+    ],
+  },
+  {
+    year: "2024",
+    entries: [
+      {
+        id: "2024-01-24",
+        date: "Jan 24, 2024",
+        weather: "Sunny but cold, −1 °C",
+        body:
+          "Cold ten days last December. Tina came home for 17 days and left last Tuesday. Busy with HK and Singapore university applications, but the agent has been slow — pushing them to speed up. Dinner this afternoon with four doctorate mates — Shijun, Zhouyi, Yang Haijun. Tomorrow, dinner with old superiors like Zhang Baochen and Shi Shiwu. Left leg is hurt so no river swimming lately.",
+      },
+      {
+        id: "2024-01-29",
+        date: "Jan 29, 2024",
+        weather: "Sunny but cold, 3 °C",
+        body:
+          "Recent two weeks — Tianjin and Zhoushan for MSA talks (tug boats and other cooperation); then Shanghai Jan 18–21 for a Wilhelmsen board meeting with Jamie, a visit to Shanghai MSA Haiping on MSA pre-inspection cooperation, and a visit to an AI company called Chato that introduced me to AI applications in office and company work. Last week to Xiamen — MSA officials and cooperation talks, plus Jimei University's navigation and engineering schools. Winter swimming three times in Dongzhi and Xizhi — better sleep and relaxation. Good news: UIUC business school admitted Tina — a face-saving result. Now on to Singapore applications.",
+      },
+      {
+        id: "2024-02-08",
+        date: "Feb 8, 2024",
+        weather: "Sunny in Beijing, 6 °C",
+        body:
+          "Writing before I catch the train to Pingdingshan — the last office day before Lunar New Year. Looking back at 2023: overall better as it went on. Early in the year I was consumed by post-COVID chest pain and coronary blockage; the second half was calmer as symptoms faded. Long-time issues remain — frequent urination, poor sleep. Hoping 2024 is good for all of us — a good university for Tina, and better health for the family.",
+      },
+      {
+        id: "2024-02-16",
+        date: "Feb 16, 2024",
+        weather: "Sunny in Beijing, 10 °C",
+        body:
+          "This morning news: HK Poly admitted Tina — but we had to decline (only two days to pay the deposit). Noon drive to the Railway Museum with dozens of trains from different Chinese and world eras.\n\nRecap of the last seven days: Feb 8, started the 11-day Lunar New Year holiday, morning train to Pingdingshan; drove straight to Baiguishan Reservoir dam — tried to swim, went to the wrong place. Feb 9 (New Year's Eve), climbed Pingdingshan Hill and made it to the top for the first time since long COVID — a real sign of recovery; in the afternoon Zhang and I found the right swimming spot at the reservoir and I swam three times and ran 2 km. Feb 10 (first day of Lunar 2024), walked the old town, drove to Yongcheng Square, ran 2 km. Feb 11, express train back to Beijing; brief swim at Dongzhimen — wonderful. Feb 12, Duolingo and the Summer Palace, where the river water was clear to the bottom — swam 2 minutes, dived twice, then ran 6 km with big crowds. Feb 15, Yao Guohui and his family visited for lunch; afternoon at Heiqiao Park, 5 km run, then the Cinema Museum for the film 热辣滚烫 by Jialing — a huge success that reminds people that if you try your best, you may make it. Feb 16, HK Poly admission, Railway Museum, and Tongzhimen winter swim — fantastic.",
+      },
+      {
+        id: "2024-03-23",
+        date: "Mar 23, 2024",
+        weather: "Cloudy in Beijing, 20 °C",
+        body:
+          "Saturday spring outing at the Xiaobeihe park with Tina and her mother. Tina has been home since Mar 15 and returns to the US in 8 days. Several offers arrived — Toronto, UC, UIUC as expected — but most others waitlists or declines. US application looks done; HK may still yield something. Dinner with Guo Chi and Yan discussing Canada schooling, which I think would be a good long-term choice. Last week — Anhui and Henan for two meetings; good to travel and enjoy different food and scenery in spring.",
+      },
+      {
+        id: "2024-06-05",
+        date: "Jun 5–11, 2024 — Pittsburgh trip to pick Tina up",
+        body:
+          "Jun 5 — Beijing → Tokyo Haneda by Air China at 8 am, half an hour at 都立芝公园 near Tokyo Tower with Jackie (last time Tina and I climbed to the top), fantastic Japanese dinner at the airport, then 11-hour United flight to Chicago O'Hare T5, transferred via T1 with rest in the ANA lounge, on to Pittsburgh at 9 pm, Hertz car by 10, Airbnb near Highland Park by midnight.\n\nJun 6 — Tina toured me around Shady Side Academy; good teaching and sports facilities, poor dorms. Squirrel Hill Chinese lunch, Giant Eagle groceries.\n\nJun 7 — early to school to pack Tina's luggage; ran a lap around SSA — so many good sports grounds. Drove to North Park; 2 km lakeside walk with Tina; lunch with Ms Schneider in the Market District to thank her for three years of care; drove past Wexford Allegheny where Tina and her mum lived 8 months; more Giant Eagle, then dinner at Jinny's; back to hotel, 3 km in Highland Park, white wine to rest.\n\nJun 8 — picked up Amber's mother at 8 am; graduation ceremony at 9; met the principal; back to dorm to pack, left school at 2, Squirrel Hill four-dish Chinese lunch.\n\nJun 9 — Highland Park run, breakfast for the kids, Costco with Amber and her mother.\n\nJun 10 — Heinz Museum in downtown Pittsburgh with Amber; Cranberry Costco, pizza; brief stop at Jinny's; refuelled — $56 — for the airport run.\n\nJun 11 — 4 am to Pittsburgh Airport, return car, Dallas layover, on to Shanghai; landed 2:30 pm, Ocean Hotel check-in.",
+      },
+      {
+        id: "2024-09-09",
+        date: "Sep 9, 2024",
+        weather: "Cloudy and rainy in Beijing, 25 °C",
+        body:
+          "Summer gone quickly; autumn already. This summer I travelled to Dalian, Yantai, Shanghai, Zhoushan, Ningbo, Tanggu, Jining in Shandong, Yanjiao in Hebei and elsewhere. My portfolio has shifted — I now oversee SCT innovation business and Zhoushan affairs. We successfully won the HK-flag vessel inspection bid. Organised two weeks of cadre training including 3rd-Plenum self-study for more than 100 HY managers; I addressed the learners. My father-in-law has been diagnosed with possible lung cancer — the family is worried; he will have exams at Beijing Xiehe Hospital soon. Next up: meeting Changjiu Logistics on the joint venture.",
+      },
+      {
+        id: "2024-11-02",
+        date: "Nov 2, 2024",
+        weather: "Smoggy in Beijing, 17 °C",
+        body:
+          "Three weeks travelling Henan, Zhejiang and Guangdong. Oct 13–22: train to Huayang's Luoyang base for a consultation meeting with 9 retired MSA guests on Huayang's development strategy; two days of meetings and a visit to the Yellow River and Xiaolangdi Dam, then downtown sightseeing at Longmen and elsewhere. Flew to Zhoushan for a petroleum-industry meeting; then Ningbo to meet MSA officials Yang and Wang. Saturday — trained to Shaoxing (a city of my dreams): Lu Xun's former residence, Shenyuan, Zhou Enlai's ancestral home, local food; back to Ningbo. Sunday — Zhoushan again with Liu, meeting some 20 people and scouting staff housing and a spares warehouse. Back to Beijing Oct 22. Three quiet days in the office; my wife had a serious anal operation and I stayed with her on the weekend.",
+      },
+    ],
+  },
+  {
+    year: "2025",
+    entries: [
+      {
+        id: "2025-01-27",
+        date: "Jan 27, 2025",
+        weather: "Sunny but very cold, 0 °C in Beijing",
+        body:
+          "Long time since my last diary in November. One day before Lunar New Year, at home resting. Yesterday dinner at Tazi's home and a swim in Dongzhimen. This break is the longest in Huayang for many years — 12 days. Before the holiday: Shanghai, Changchun (bidding evaluation) and Zhoushan for business. Tina relaxed at home almost three weeks after four tense months at WashU and returned two weeks ago — so we won't be together for Chunjie, the most important festival for Chinese. Feng's family may come here any time — but each time I want to invite my relatives she opposes it. A tense workload ahead in 2025; hoping for a smooth and peaceful year for me, the company and everyone.",
+      },
+      {
+        id: "2025-01-29",
+        date: "Jan 29–30, 2025 — Changsha journey",
+        body:
+          "Jan 29 — arrived Changsha on CA1373, crisp 5 °C, overcast. Line 6 to Line 2, off at Rongwan Town Exit 3, into the modest Tongcheng Lushan Hotel (¥339). Drawn to Yuelu Mountain 500 m away; even at night crowds were climbing, so I joined — 3 km of winding paths to the summit at 330 m, where the Changsha TV Tower stood over shimmering city lights. Down the main path, 2 km jog through the East Gate to Dongfanghong Square, Hunan University and Yuelu Academy, then Line 4 home by 9 pm.\n\nJan 30 — Orange Isle (had grabbed a ticket the day before): shuttle bus south to the inscription of Mao's poem 'Qinyuan Spring: Changsha', through Plum and Bamboo Gardens to the young-Mao statue at the southern tip. Walked 1 km on the west, cycled the northern beaches and amphibious area. Back on Line 2 to Wuyi Square, walked to Jia Yi's former residence, then Taiping Street and Pozi Street — spicy duck and stinky tofu too fiery for me. Cycled to Hunan Normal University, Hunan University and Yuelu Academy (closed — disappointment). West Lake Park by bike, 5 km loop. Back near the hotel, a beer and stinky tofu at KFC — too spicy. Lines 2 and 6 to the airport; flight home on points (¥140), arrived 11:30 pm, applied erythromycin to irritated eyes and slept dreaming of Changsha. Two-day cost: ~¥629.",
+      },
+      {
+        id: "2025-03-23",
+        date: "Mar 23, 2025",
+        weather: "Sunny and hot, 28 °C (abnormal)",
+        body:
+          "Six weeks since Lunar New Year — six trips outside Beijing: Zhoushan (twice), Ningbo, Qingdao, Tianjin/Tanggu, Shanghai, Taizhou in Jiangsu — business visits and meetings with MSA Zhejiang and Ningbo among others. More travel ahead this year. Knees and sacrum have been aching, probably from Jingshi gym exercise, but I keep on. Cold-water swimming continues — more than 20 times in Dongzhi and Xizhimen in the past two months — good for health, but weight up by 2 kg, so I have to cut from three meals to two. Still learning Spanish and French — similar, and probably good for the brain. Sightseeing: West Lake, Xixi Wetland — places I have visited before.",
+      },
+      {
+        id: "2025-09-07",
+        date: "Sep 7, 2025 · Sunday",
+        weather: "Sunny, 30 °C",
+        body:
+          "No diary for almost half a year. Drove to Sunhe Open Market for fruit and vegetables — first time. Dinner with Long Qixun from Yantai tonight. Last week — Zhoushan, Ningbo, Shanghai for Bao Rensong's retirement, a Zhoushan firm-development forum and other visits. Half-year recap: several trips outside Beijing, a hometown visit with old relatives, but the main things were a month at Party School and time with Tina. Sightseeing: Taizhou, Tiantai Mountain in Tiantai, Luoyang and Zhengzhou in detail for the first time, Naiman in Tongliao. No trips abroad. Tina was home over 100 days this summer — the longest since she went to the US four years ago. She did a software-engineer probation at our company, took the Spanish DELE exam and visited Korea and my hometown. We quarreled about her late nights and lax study — hard for her to change habits, hard for me to change mine.",
+      },
+      {
+        id: "2025-10-01",
+        date: "Oct 1, 2025 · Wednesday",
+        weather: "Sunny, 26 °C",
+        body:
+          "First of the 8-day National Holiday. Returned last night from Zhejiang — visited Zhejiang MSA, Liuheng Island and Zhoushan on seafarer issues; several deals in prospect. Last Tuesday to Zhangjiakou for another military-camp bidding. The company's fate is increasingly uncertain — we've been asked for different scenarios on whether we'll remain in MOT. Waist, knees and legs have been in pain, so I've stopped running for now — I have to accept I am older and cannot keep up long-distance running or overly aggressive activity.",
+      },
+      {
+        id: "2025-10-28",
+        date: "Oct 28, 2025 · Yanjiao Party School",
+        weather: "Smoggy, 16 °C",
+        body:
+          "Started Belt-and-Road diplomacy studies in Yanjiao — second time here this year; last was a month in June. A good way to meet more people. Last work-week in Zhoushan and Zhejiang — keynote at the Zhoushan Petro Dealer Meeting calling for developing Zhoushan's seafarer sector; visited Liuheng Island to discuss the Seafarer Home project for international and domestic crew during dry-docking (an MOT initiative). Also visits to two companies to promote HMC products. Next week — Shanghai for a UK-night event and Liu Changqing on the power-saving project; Wednesday, a meeting on new-product promotion collaboration.",
+      },
+      {
+        id: "2025-11-22",
+        date: "Nov 22, 2025",
+        weather: "Warm and sunny, 15 °C",
+        body:
+          "Down with the flu for several days — throat and nose pain, no sneezes. Last week I had another coronary angiogram (did one two years ago); vessels are in sound shape — even improved. As I age, colossal diseases appear step by step. Next week — booked gastroenteroscopy; if that's clear I may keep taking aspirin for blood viscosity. Then Guangzhou and Shenzhen for two days before the surgery. Tina did well in a campus show performance.",
+      },
+      {
+        id: "2025-12-25",
+        date: "Dec 25, 2025",
+        weather: "Sunny but cold, −8 °C at night, 2 °C in the day",
+        body:
+          "Christmas in cold days. Tina came home last week but is busy socialising with classmates — perhaps all adult children grow more alienated from their parents. What worries me most is her schoolwork and grades. Huayang has to lower salaries under new regulations; I've been busy preparing the year-end salary and bonus distribution. Swum several times since November but it doesn't feel the same as in the past three years — my back pain may be a factor.",
+      },
+    ],
+  },
+  {
+    year: "2026",
+    entries: [
+      {
+        id: "2026-01-01",
+        date: "Jan 1, 2026",
+        weather: "Warm and sunny, 3 °C",
+        body:
+          "The last two or three weeks have been full of year-end evaluations and salary/bonus distribution. New MOT and WTI requirements limit total salary and bonus for state-owned businesses; we secured the bonus but below expectation. Tina came home two weeks ago but seems fully relaxed — parties and gatherings with classmates; I rarely see her study. Slept poorly last night — up three times to the toilet. This morning I proofread for Feng, sent Tina to Xizhimen for dancing, then swam two minutes there (~3 °C) with other winter swimmers. Back to the office for two hours, picked Tina up with Wang Jinyi, cooked at home, then an hour of physical exercise at Jingshi (closed at 8 for the holiday).",
+      },
+      {
+        id: "2026-01-12",
+        date: "Jan 12, 2026 — Dalian",
+        weather: "Cold and windy",
+        body:
+          "Right after Tina left for WashU I flew to Dalian for three days — first time in several months. Tina was kind before leaving, asking for the cash she needs for accommodation and food. On the plane a Japanese mother and daughter chatted a lot — complaining about the new Japanese PM (Takaichi), and about Taiwanese and Shanghainese pushing Tokyo real-estate prices up; I helped her with luggage at Dalian airport and she thanked me warmly. Met good friends in Dalian — Liu Li, Zhao Baogang and others — dinner, chat and cards. Today, met Li Daze at the hotel. Tomorrow — Dalian Maritime University cadres on the power-saving business.",
+      },
+      {
+        id: "2026-02-01",
+        date: "Feb 1, 2026 · Sunday",
+        weather: "Warm, 10 °C",
+        body:
+          "Swam about 90 seconds in Tongzhimen and dived once. Waist pain has kept me from doing much winter swimming; morning acupuncture at the clinic. Recent travel: Zhoushan to learn more about the Crew Home construction and meet local MSA officials in Liuheng; Jan 20–23 in Shanghai with Li Liqian to meet Jamie's guests and the Shanghai Huayang team on JV and sales matters — dinners with Mr Xu, Mr Guo and other dignitaries. Jan 26–29 in Ningbo and Hangzhou with Mr Zhu Jianhua and Li Liqian, meeting Ningbo and Zhejiang MSA officials; then Tianjin to meet Sun Wenchang and Gang Zijun — good meetings. Several more meetings and discussions next week.",
+      },
+      {
+        id: "2026-02-25",
+        date: "Feb 25, 2026",
+        weather: "Cloudy, windy, 8 °C",
+        body:
+          "Lunar New Year is over and 2026 has really begun. During the holidays (Feb 14–18) I toured Nha Trang, Vietnam, for six days with nine other Chinese travellers. The warmth made my waist pain quickly disappear, but the city's motor traffic and bad traffic lights make walking dangerous, and the coastline is especially unsafe — the safety awareness is low. Enjoyed the arranged programme plus dinners in a starred hotel and free walks on the streets. Vietnam is poor — big groups squeezed into tiny rooms for lunch, and in the suburbs people live in poor houses. I bought coffee and fried mango chips to support locals. A worthwhile trip — didn't spend too much, and enjoyed good seats and rest on the flights. Lunch today with Lu Xiaofeng — a good chat about many years past. Back to work now with real challenges ahead for 2026.",
+      },
+      {
+        id: "2026-07-18",
+        date: "Jul 18–22, 2026 — Yangzhou business trip",
+        body:
+          "Jul 18 (Fri) — 11 pm Air China flight from Beijing Daxing to Yangzhou; checked into Jinling Grand Hotel and slept.\n\nJul 19 (Sat) — 8 am, 5 km on an electric scooter to Slender West Lake along the Grand Canal; entered South Gate, sightseeing and jogging out the West Gate then up to the central northern area and out the North Gate; taxi back. 10:30 met Yin Xiumeng and the Yinghai Technology team to discuss a supply-chain platform for the alliance — productive; drafted a meeting summary; asked them to deepen requirements with Tianjin Ship Management the following week. Lunch at the hotel with newly arrived guests; afternoon at the conference venue preparing my speech. Evening — hosted a dinner table for foreign guests including the GMs of Bernhard Schulte and Wilhelmsen Ship Management, PHIPPS, Chen Xiang and others.\n\nJul 20 (Sun) — ship-management forum in the morning, buffet lunch; delivered my speech at 4 pm, then dinner with guests. Later, taxi to Dongguan Street — Geyuan Garden already closed for ticket sales, so walked west-to-east along the Grand Canal, bought medicine, and reached Jiang Zemin's former residence (also closed) — decided to return the next morning.\n\nJul 21 (Mon) — 8 am taxi to Heyuan Garden; motorbike taxi to Zhu Ziqing's former residence, where a young student guide told stories of his life and major works; walked 700 m to Comrade Jiang Zemin's former residence — his remarkable life and Yangzhou ties; 200 m more to Geyuan Garden — history and the bamboo grove, out the North Gate; taxi to Emperor Yang Guang's tomb site and the Yang Guang Museum; back to the hotel for lunch with guests, checked out, high-speed train from Zhenjiang South, home in Beijing at 7 pm; Jingshi gym by 8 and slept soundly.\n\nJul 22 (Tue) — rest, exercise and a visit to Tianzi's family to see Dudu.",
+      },
+    ],
+  },
 ];
