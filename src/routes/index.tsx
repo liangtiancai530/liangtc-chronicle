@@ -1,5 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect, useRouter } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { useEffect, useMemo, useState } from "react";
+import { checkUnlocked, lockSite } from "@/lib/gate.functions";
 import portrait from "@/assets/portrait.jpg";
 import zmsaSpeech from "@/assets/liang-zmsa-speech.png.asset.json";
 import { DIARY_ARCHIVE, type ArchivedDiaryEntry } from "@/data/diary-archive";
@@ -17,6 +19,12 @@ const MEMORABLE_EVENTS: MemorableEvent[] = [
 ];
 
 export const Route = createFileRoute("/")({
+  beforeLoad: async () => {
+    const { unlocked } = await checkUnlocked();
+    if (!unlocked) {
+      throw redirect({ to: "/unlock" });
+    }
+  },
   head: () => ({
     meta: [
       { title: "LTC Traces — Liang's Life Traces (1989–Present)" },
@@ -25,12 +33,7 @@ export const Route = createFileRoute("/")({
         content:
           "A personal chronicle of Liang's life traces from 1989 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
       },
-      { property: "og:title", content: "LTC Traces — Liang's Life Traces (1989–Present)" },
-      {
-        property: "og:description",
-        content:
-          "A personal chronicle of Liang's life traces from 1989 to today, drawn from his diaries, alongside a classic Windows-style diary writer.",
-      },
+      { name: "robots", content: "noindex, nofollow" },
     ],
   }),
   component: Home,
@@ -160,18 +163,37 @@ type DiaryEntry = { id: string; date: string; title: string; body: string };
 const STORAGE_KEY = "ltc-traces-diary-v1";
 
 function Home() {
+  const router = useRouter();
+  const lock = useServerFn(lockSite);
+
+  async function handleLock() {
+    await lock();
+    await router.invalidate();
+    await router.navigate({ to: "/unlock" });
+  }
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <header className="border-b border-border">
-        <div className="mx-auto max-w-[1400px] px-6 py-5 flex items-baseline justify-between">
+        <div className="mx-auto max-w-[1400px] px-6 py-5 flex items-baseline justify-between gap-4">
           <h1 className="text-2xl font-serif tracking-tight">
             LTC Traces
           </h1>
-          <p className="text-sm text-muted-foreground font-serif italic">
-            Liang — a life in traces, 1989 to today
-          </p>
+          <div className="flex items-baseline gap-4">
+            <p className="text-sm text-muted-foreground font-serif italic hidden sm:block">
+              Liang — a life in traces, 1989 to today
+            </p>
+            <button
+              onClick={handleLock}
+              className="text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground border border-border rounded px-2 py-1"
+              title="Lock this site"
+            >
+              Lock
+            </button>
+          </div>
         </div>
       </header>
+
 
       <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[280px_1fr_1fr_400px] gap-6">
         <PortraitColumn />
