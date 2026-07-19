@@ -1,5 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, redirect, useRouter } from "@tanstack/react-router";
+import { useServerFn } from "@tanstack/react-start";
 import { useEffect, useMemo, useState } from "react";
+import { checkUnlocked, lockSite } from "@/lib/gate.functions";
 import portrait from "@/assets/portrait.jpg";
 import zmsaSpeech from "@/assets/liang-zmsa-speech.png.asset.json";
 import { DIARY_ARCHIVE, type ArchivedDiaryEntry } from "@/data/diary-archive";
