@@ -55,6 +55,26 @@ type Trace = { date: string; title: string; body: string };
 
 const TRACES: Trace[] = [
   {
+    date: "1970",
+    title: "Born into a family of seven in rural northern China",
+    body: "Born into a poor farming family of seven in a village in northern China — parents, siblings and myself all under one roof, all under one roof's worries.",
+  },
+  {
+    date: "1978",
+    title: "First day of primary school, aged eight",
+    body: "Became a primary-school student at eight years old — later than most, but the beginning of a road out of the village through study.",
+  },
+  {
+    date: "1983",
+    title: "Enrolled at Sidaowan Middle School",
+    body: "Enrolled by the prestigious Sidaowan Middle School — the first time I left my parents to live away from home.",
+  },
+  {
+    date: "1984",
+    title: "Sidaowan dismissed; back to Saliba Middle School",
+    body: "Sidaowan Middle School was dismissed and I was sent back to Saliba Middle School to continue my studies.",
+  },
+  {
     date: "Sep 1989",
     title: "Enrolled at Inner Mongolia Normal University",
     body: "After six hard years in middle school, I was enrolled as an English major at Inner Mongolia Normal University — the first major step away from my rural hometown in northern China.",
@@ -65,15 +85,21 @@ const TRACES: Trace[] = [
     body: "Graduated and was recruited as a teacher by Inner Mongolia Finance and Economic Institute, where I spent the next six years in the classroom.",
   },
   {
-    date: "Sep 1995 – Jul 1996",
-    title: "Training at UIBE and the road to Beijing",
-    body: "Went to Beijing for a one-year training program at the University of International Business and Economics (UIBE). I took the master's degree entrance exam and was enrolled by Beijing International Studies University.",
+    date: "Sep 1995",
+    title: "Left Hohhot for Beijing — training at UIBE",
+    body: "Left Hohhot for Beijing to take a one-year training programme at the University of International Business and Economics (UIBE).",
+  },
+  {
+    date: "1996",
+    title: "Enrolled by Beijing International Studies University",
+    body: "Passed the master's degree entrance exam and was enrolled by Beijing International Studies University (BISU).",
   },
   {
     date: "Jul 1999",
-    title: "Joined Huayang Maritime Center",
-    body: "Recruited by Huayang Maritime Center Co., Ltd. (HMC) in July 1999, beginning what would become more than 27 years with the same company.",
+    title: "Recruited by China Maritime Service Center",
+    body: "Recruited by China Maritime Service Center (Huayang Maritime Center) in July 1999 — the start of what would become more than 27 years with the same company.",
   },
+
   {
     date: "2004",
     title: "Promoted to Deputy General Manager of HMC",
