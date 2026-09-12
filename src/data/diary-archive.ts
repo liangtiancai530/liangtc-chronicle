@@ -707,3 +707,8 @@ const ARCHIVE_RAW: ArchivedDiaryYear[] = [
     ],
   },
 ];
+
+export const DIARY_ARCHIVE: ArchivedDiaryYear[] = ARCHIVE_RAW.map((year) => ({
+  ...year,
+  entries: [...year.entries].reverse(),
+})).reverse();
