@@ -10,10 +10,11 @@ export type ArchivedDiaryYear = {
   entries: ArchivedDiaryEntry[];
 };
 
-// Entries drawn from Liang's original diaries (2009–2018).
+// Entries drawn from Liang's original diaries (2009–2026).
 // Chinese entries have been summarised in English; English entries are lightly
 // tidied from the original text.
-export const DIARY_ARCHIVE: ArchivedDiaryYear[] = [
+// Years and entries within each year are ordered newest-first.
+const ARCHIVE_RAW: ArchivedDiaryYear[] = [
   {
     year: "2009",
     entries: [
