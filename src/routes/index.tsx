@@ -2,20 +2,6 @@ import { createFileRoute, redirect, useRouter } from "@tanstack/react-router";
 import { useServerFn } from "@tanstack/react-start";
 import { useEffect, useMemo, useState } from "react";
 import { checkUnlocked, lockSite } from "@/lib/gate.functions";
-import portrait from "@/assets/portrait.jpg";
-import zmsaSpeech from "@/assets/liang-zmsa-speech.png.asset.json";
-import liang1Inch2005 from "@/assets/liang-1inch-2005.jpg.asset.json";
-
-type MemorablePhoto = { date: string; title: string; image: string; caption?: string };
-
-const MEMORABLE_PHOTOS: MemorablePhoto[] = [
-  {
-    date: "2005",
-    title: "One-Inch ID Photo",
-    image: liang1Inch2005.url,
-    caption: "A one-inch ID portrait taken in 2005 — a year after being promoted to Deputy General Manager at HMC.",
-  },
-];
 import { DIARY_ARCHIVE, type ArchivedDiaryEntry } from "@/data/diary-archive";
 
 type MemorableEvent = { date: string; title: string; image?: string; body: string };
@@ -24,7 +10,6 @@ const MEMORABLE_EVENTS: MemorableEvent[] = [
   {
     date: "Jul 11, 2026",
     title: "Keynote at China Maritime Day — ZMSA Alliance",
-    image: zmsaSpeech.url,
     body:
       "The 22nd China Maritime Day. As Deputy General Manager of Huayang Maritime Center Co., Ltd., Liang Tiancai delivered a keynote on how the Zhoushan Comprehensive Maritime Service Alliance (ZMSA) can advance green and intelligent shipping. Leveraging the Yangtze River Delta location and Zhoushan's maritime industry resources, the alliance aims to build an open, collaborative, and shared maritime service ecosystem — focusing on green low-carbon service matching, digital-intelligent ship management platforms, international-rule interoperability, and shared branding. Through a path of \"connection, standardization, and platformization,\" it seeks to lower transformation costs and improve operational efficiency for small and medium shipping companies, aggregating scattered single-point capabilities into comprehensive solutions and moving green intelligent shipping from enterprise islands to industry-wide coordination.",
   },
@@ -230,11 +215,10 @@ function Home() {
       </header>
 
 
-      <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[260px_1fr_1fr_320px] gap-6 items-start">
+      <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[260px_1fr_1fr] gap-6 items-start">
         <PortraitColumn />
         <TracesColumn />
         <MemorableEventsColumn />
-        <MemorablePhotosColumn />
       </main>
 
       <ArchiveSection />
@@ -355,11 +339,6 @@ function PortraitColumn() {
   return (
     <aside className="lg:sticky lg:top-6 lg:self-start">
       <div className="rounded-lg border border-border bg-card p-5">
-        <img
-          src={portrait}
-          alt="Portrait of Liang"
-          className="w-full rounded-md object-cover aspect-[4/5] mb-4"
-        />
         <h2 className="font-serif text-xl mb-1">Liang</h2>
         <p className="text-xs uppercase tracking-widest text-muted-foreground mb-4">
           Manager · Writer
@@ -404,13 +383,6 @@ function MemorableEventsColumn() {
             key={i}
             className="rounded-lg border border-border bg-card overflow-hidden"
           >
-            {e.image && (
-              <img
-                src={e.image}
-                alt={e.title}
-                className="w-full aspect-[4/3] object-cover"
-              />
-            )}
             <div className="p-4">
               <div className="text-xs uppercase tracking-widest text-muted-foreground">
                 {e.date}
@@ -452,44 +424,6 @@ function TracesColumn() {
             </li>
           ))}
         </ol>
-      </div>
-    </section>
-  );
-}
-
-function MemorablePhotosColumn() {
-  return (
-    <section>
-      <div className="mb-5">
-        <h2 className="font-serif text-2xl">Memorable Photos</h2>
-        <p className="text-sm text-muted-foreground">
-          Photographs kept close — added over time.
-        </p>
-      </div>
-      <div className="space-y-6">
-        {MEMORABLE_PHOTOS.map((p, i) => (
-          <figure
-            key={i}
-            className="rounded-lg border border-border bg-card overflow-hidden"
-          >
-            <img
-              src={p.image}
-              alt={p.title}
-              className="w-full object-cover"
-            />
-            <figcaption className="p-4">
-              <div className="text-xs uppercase tracking-widest text-muted-foreground">
-                {p.date}
-              </div>
-              <h3 className="font-serif text-lg mt-1">{p.title}</h3>
-              {p.caption && (
-                <p className="text-sm leading-relaxed mt-2 text-foreground/90">
-                  {p.caption}
-                </p>
-              )}
-            </figcaption>
-          </figure>
-        ))}
       </div>
     </section>
   );
