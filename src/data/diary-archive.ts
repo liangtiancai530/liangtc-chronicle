@@ -430,6 +430,18 @@ const ARCHIVE_RAW: ArchivedDiaryYear[] = [
     ],
   },
   {
+    year: "2021",
+    entries: [
+      {
+        id: "2021-12-31",
+        date: "Year in Review — 2021",
+        weather: "A hard, quiet year under COVID",
+        body:
+          "The whole year was not that exciting. It was the year Tina was recruited by SSA in the USA. In the last half of the year, I spent quite some time helping Tina apply for schooling in the USA — altogether some 80,000 yuan for the application and other matters. She was first admitted by a high school in Hawaii, and then by SSA; we chose SSA because it is on the US mainland. But it seems to have been a completely wrong decision: during the COVID period it was extremely difficult for her to fly home, and she had to transfer through Hong Kong, Japan and other places. A lot of money was wasted, as Tina was too young to cope with independent life abroad. The biggest problem was that her mother and I missed our daughter so much that we could not fall asleep at night. I guess Tina missed her parents too. In any case, she conquered the hardships of schooling abroad.\n\nOn October 15 that year, we moved into our present office building, Huanmao Mansion, where I have now worked for five years.\n\nAt the end of the year, Mr. Yang Shanli joined Huayang as Deputy General Manager.\n\nThat year, COVID became more and more severe: in May, one of the ships under our management was caught in Zhoushan by the Delta variant, and we managed to get it released, at the cost of a lot of time and money.\n\nThat year, I gradually became accustomed to my ear-ringing problem after some time and courses of medicine. And some other important things happened to me that I can no longer recall.",
+      },
+    ],
+  },
+  {
     year: "2022",
     entries: [
       {
