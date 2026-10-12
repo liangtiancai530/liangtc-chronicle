@@ -232,7 +232,7 @@ function Home() {
   );
 }
 
-/* ---------- Diary Archive (2009–2018) ---------- */
+/* ---------- Diary Archive (2009–Present) ---------- */
 
 function ArchiveSection() {
   const years = DIARY_ARCHIVE.map((y) => y.year);
@@ -252,7 +252,7 @@ function ArchiveSection() {
   return (
     <section className="mx-auto max-w-[1600px] px-6 pt-8 pb-12">
       <div className="mb-5">
-        <h2 className="font-serif text-2xl">Diary Archive · 2009–2018</h2>
+        <h2 className="font-serif text-2xl">Diary Archive · 2009–Present</h2>
         <p className="text-sm text-muted-foreground">
           Selected entries from Liang's personal diaries — travel, family,
           business trips, and the hard seasons. Read-only.
