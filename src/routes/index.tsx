@@ -215,13 +215,13 @@ function Home() {
       </header>
 
 
+      <ArchiveSection />
+
       <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[260px_1fr_1fr] gap-6 items-start">
         <PortraitColumn />
         <TracesColumn />
         <MemorableEventsColumn />
       </main>
-
-      <ArchiveSection />
 
       <footer className="border-t border-border mt-8">
         <div className="mx-auto max-w-[1400px] px-6 py-4 text-xs text-muted-foreground">
@@ -250,7 +250,7 @@ function ArchiveSection() {
   }
 
   return (
-    <section className="mx-auto max-w-[1600px] px-6 pb-12">
+    <section className="mx-auto max-w-[1600px] px-6 pt-8 pb-12">
       <div className="mb-5">
         <h2 className="font-serif text-2xl">Diary Archive · 2009–2018</h2>
         <p className="text-sm text-muted-foreground">
