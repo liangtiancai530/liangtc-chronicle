@@ -215,13 +215,13 @@ function Home() {
       </header>
 
 
+      <ArchiveSection />
+
       <main className="mx-auto max-w-[1600px] px-6 py-8 grid grid-cols-1 lg:grid-cols-[260px_1fr_1fr] gap-6 items-start">
         <PortraitColumn />
         <TracesColumn />
         <MemorableEventsColumn />
       </main>
-
-      <ArchiveSection />
 
       <footer className="border-t border-border mt-8">
         <div className="mx-auto max-w-[1400px] px-6 py-4 text-xs text-muted-foreground">
