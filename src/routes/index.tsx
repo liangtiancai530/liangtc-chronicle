@@ -250,7 +250,7 @@ function ArchiveSection() {
   }
 
   return (
-    <section className="mx-auto max-w-[1600px] px-6 pb-12">
+    <section className="mx-auto max-w-[1600px] px-6 pt-8 pb-12">
       <div className="mb-5">
         <h2 className="font-serif text-2xl">Diary Archive · 2009–2018</h2>
         <p className="text-sm text-muted-foreground">
